@@ -1,4 +1,4 @@
-SELECT * FROM green_taxi_trips g where EXTRACT(MONTH FROM g.lpep_pickup_datetime) = 1 and EXTRACT(DAY FROM g.lpep_pickup_datetime) = 15; 
+SELECT COUNT(*) FROM green_taxi_trips g where EXTRACT(MONTH FROM g.lpep_pickup_datetime) = 1 and EXTRACT(DAY FROM g.lpep_pickup_datetime) = 15; 
 
 SELECT DATE_TRUNC('day', g.lpep_pickup_datetime) from green_taxi_trips g where trip_distance = (SELECT MAX(trip_distance) from green_taxi_trips);
 
